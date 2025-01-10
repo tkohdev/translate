@@ -22,6 +22,44 @@ const languageCodeMapping = {
     'zh-tw': 'zh-TW'
 };
 
+// run-local.js
+const { Translate } = require('@aws-sdk/client-translate');
+
+// Configure the AWS Translate client
+const translateService = new Translate({
+    region: process.env.AWS_REGION,
+    credentials: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    }
+});
+const app = express();
+
+app.post('/translate', (req, res) => {
+    const body = req.body;
+    const params = {
+        Text: body.raw_text,
+        SourceLanguageCode: body.source_language,
+        TargetLanguageCode: body.target_language
+    };
+
+    // Use the translate service
+    translateService.translateText(params)
+    .then((data) =>{
+        let statusCode = data['$metadata'].httpStatusCode;
+        let translatedText = data.TranslatedText;
+
+        res.status(statusCode).json({
+            source_language: data.SourceLanguageCode,
+            translated_text: translatedText
+        });
+    })
+    .catch(err => {
+        console.error(err);
+        res.status(400);
+    });
+});
+
 export default {
     translateText(text, language, callback) {
         let language_code = languageCodeMapping[language] ? 
