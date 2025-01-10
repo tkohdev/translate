@@ -1,4 +1,5 @@
 import config from './config.js';
+import { Translate } from "@aws-sdk/client-translate";
 
 // Genesys Cloud Language Code to AWS Translate Language Code
 const languageCodeMapping = {
@@ -23,7 +24,7 @@ const languageCodeMapping = {
 };
 
 // run-local.js
-const { Translate } = require('@aws-sdk/client-translate');
+// const { Translate } = require('@aws-sdk/client-translate');
 
 // Configure the AWS Translate client
 const translateService = new Translate({
