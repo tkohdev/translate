@@ -22,6 +22,12 @@ const languageCodeMapping = {
     'zh-tw': 'zh-TW'
 };
 
+const https = require('https');
+const fs = require('fs');
+const express = require('express');
+const { Translate } = require('@aws-sdk/client-translate');
+require('dotenv').config();
+const cors = require('cors');
 const { Translate } = require('@aws-sdk/client-translate');
 
 // Configure the AWS Translate client
