@@ -1,14 +1,14 @@
 export default {
     // Token Implicit Grant Client ID
-    clientID: 'your-client-id-here',
+    clientID: '	a89c9fcd-50b0-4248-bcea-776700d9a775',
 
-    redirectUri: 'https://localhost/',
+    redirectUri: 'https://tkohdev.github.io/translate/',
 
     genesysCloud: {
         // Genesys Cloud region
         // eg. 'mypurecloud.ie', 'euw2.pure.cloud', etc...
-        region: 'mypurecloud.com'
+        region: 'apne2.pure.cloud'
     },
 
-    translateServiceURI: 'https://localhost/translate'
+    translateServiceURI: 'https://tkohdev.github.io/translate/'
 } 
