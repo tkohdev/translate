@@ -1,6 +1,6 @@
 export default {
     // Token Implicit Grant Client ID
-    clientID: '	a89c9fcd-50b0-4248-bcea-776700d9a775',
+    clientID: '	aafaf879-6961-472a-b5dc-db4fb6a0bd68',
 
     redirectUri: 'https://tkohdev.github.io/translate/index.heml',
 
