@@ -1,5 +1,5 @@
 import config from './config.js';
-import Translate from './aws-sdk-2.1692.0.min.js';
+import Translate from './aws-sdk-2.1692.0.js';
 // import { Translate } from "@aws-sdk/client-translate"; // ES Modules import
 
 // Genesys Cloud Language Code to AWS Translate Language Code
