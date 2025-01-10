@@ -28,6 +28,7 @@ let messageIds = [];
  *
  * @param {Object} data the event data
  */
+
 const onMessage = data => {
     console.log(JSON.stringify(data));
 
