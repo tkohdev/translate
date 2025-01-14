@@ -436,6 +436,7 @@ document.getElementById('toggle-search')
 const urlParams = new URLSearchParams(window.location.search);
 currentConversationId = urlParams.get('conversationid');
 genesysCloudLanguage = urlParams.get('language');
+genesysCloudLanguage = 'ko-kr';
 
 client.setPersistSettings(true, 'chat-translator');
 client.setEnvironment(config.genesysCloud.region);
