@@ -22,7 +22,7 @@ const languageCodeMapping = {
     'ja': 'ja',
     'zh-cn': 'zh',
     'zh-tw': 'zh-TW',
-	'ko-kr': 'ko-kr'
+	'ko-kr': 'ko'
 };
 
 
@@ -34,7 +34,7 @@ export default {
         let data = {
             raw_text: text,
             source_language: 'auto',
-            target_language: 'language_code'
+            target_language: language_code
         };
 
         fetch(config.translateServiceURI,
