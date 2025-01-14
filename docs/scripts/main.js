@@ -55,6 +55,7 @@ const onMessage = data => {
         translate.translateText(message, genesysCloudLanguage, function(translatedData) {
             view.addChatMessage(name, translatedData.translated_text, purpose);
             translationData = translatedData;
+			console.log(translationData);
         });
     } else if(messageType === 'message') {
         let messageId = '';
@@ -435,8 +436,8 @@ document.getElementById('toggle-search')
  * -------------------------------------------------------------- */
 const urlParams = new URLSearchParams(window.location.search);
 currentConversationId = urlParams.get('conversationid');
-// genesysCloudLanguage = urlParams.get('language');
-genesysCloudLanguage = 'ko-kr';
+ genesysCloudLanguage = urlParams.get('language');
+//genesysCloudLanguage = 'ko-kr';
 
 client.setPersistSettings(true, 'chat-translator');
 client.setEnvironment(config.genesysCloud.region);
