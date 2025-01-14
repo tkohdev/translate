@@ -10,5 +10,5 @@ export default {
         region: 'apne2.pure.cloud'
     },
 
-    translateServiceURI: 'https://translate.ap-northeast-2.amazonaws.com/'
+    translateServiceURI: 'https://translate.ap-northeast-2.amazonaws.com'
 } 
