@@ -36,7 +36,8 @@ export default {
             source_language: 'auto',
             target_language: language_code
         };
-
+		console.log("translate success!!!");
+		console.log(data);
         fetch(config.translateServiceURI,
             {
                 method: 'POST',
@@ -49,7 +50,6 @@ export default {
         .then(response => response.json())
         .then(translationData => {
             console.log(JSON.stringify(translationData));
-			console.log("translate success!!!");
 
             callback(translationData);
         })
