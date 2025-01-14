@@ -34,7 +34,7 @@ export default {
         let data = {
             raw_text: text,
             source_language: 'auto',
-            target_language: language_code
+            target_language: 'ko-kr'
         };
 
         fetch(config.translateServiceURI,
