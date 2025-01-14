@@ -21,7 +21,8 @@ const languageCodeMapping = {
     'th': 'th',
     'ja': 'ja',
     'zh-cn': 'zh',
-    'zh-tw': 'zh-TW'
+    'zh-tw': 'zh-TW',
+	'ko': 'ko'
 };
 
 
