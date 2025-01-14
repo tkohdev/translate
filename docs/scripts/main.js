@@ -111,6 +111,7 @@ const onMessage = data => {
                     translate.translateText(messageDetail.textBody, genesysCloudLanguage, function(translatedData) {
                         view.addChatMessage(name, translatedData.translated_text, purpose);
                         translationData = translatedData;
+						console.log(translationData);
                     });
                 }));
             }
