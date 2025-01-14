@@ -24,7 +24,14 @@ const languageCodeMapping = {
     'zh-tw': 'zh-TW',
 	'ko-kr': 'ko'
 };
-
+const { Translate } = require('@aws-sdk/client-translate');
+const translateService = new Translate({ 
+    region: process.env.AWS_REGION,
+    credentials: {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    }
+});
 
 export default {
     translateText(text, language, callback) {
@@ -56,3 +63,19 @@ export default {
         .catch(e => console.error(e));
     }
 };
+
+// Use the translate service
+translateService.translateText(params)
+.then((data) =>{
+    let statusCode = data['$metadata'].httpStatusCode;
+    let translatedText = data.TranslatedText;
+
+    res.status(statusCode).json({ 
+        source_language: data.SourceLanguageCode,
+        translated_text: translatedText
+    });
+})
+.catch(err => {
+    console.error(err);
+    res.status(400);
+});
