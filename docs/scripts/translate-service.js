@@ -22,7 +22,7 @@ const languageCodeMapping = {
     'ja': 'ja',
     'zh-cn': 'zh',
     'zh-tw': 'zh-TW',
-	'ko': 'ko'
+	'ko-kr': 'ko-kr'
 };
 
 
@@ -49,6 +49,7 @@ export default {
         .then(response => response.json())
         .then(translationData => {
             console.log(JSON.stringify(translationData));
+			console.log("translate success!!!");
 
             callback(translationData);
         })
