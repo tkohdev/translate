@@ -36,7 +36,7 @@ export default {
             source_language: 'auto',
             target_language: language_code
         };
-
+		console.log(data);
         fetch(config.translateServiceURI,
             {
                 method: 'POST',
