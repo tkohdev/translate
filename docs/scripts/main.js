@@ -20,7 +20,7 @@ let currentConversation = null;
 let currentConversationId = '';
 let translationData = null;
 let genesysCloudLanguage = 'en-us';
-let messageType = '';
+let messageType = 'message';
 let messageIds = [];
 
 /**
