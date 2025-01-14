@@ -57,7 +57,7 @@ const onMessage = data => {
             translationData = translatedData;
 			console.log(translationData);
         });
-    } else if(messageType === 'message') {
+    } else if(messageType === 'webmessaging') {
         let messageId = '';
         let purpose = '';
         let name = '';
@@ -66,7 +66,7 @@ const onMessage = data => {
         var participantPurposes = [];
         var publish = false;
         var mostRecentMessageTime = '';
-
+		console.log('onmessage');
         // Discard unwanted notifications
         if(data.topicName.toLowerCase() === 'channel.metadata') {
             // Heartbeat
