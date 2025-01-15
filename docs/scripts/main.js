@@ -2,8 +2,8 @@ import view from './view.js';
 import controller from './notifications-controller.js';
 import translate from './translate-service.js';
 import config from './config.js';
-import Translate from './aws-sdk-2.1692.0.js';
 
+//import Translate from './aws-sdk-2.1692.0.js';
 //const { Translate } = require('@aws-sdk/client-translate');
 //const Translate = require('aws-sdk');
 
@@ -16,6 +16,7 @@ const usersApi = new platformClient.UsersApi();
 const conversationsApi = new platformClient.ConversationsApi();
 const responseManagementApi = new platformClient.ResponseManagementApi();
 
+/*
 // Configure the AWS Translate client
 const translateService = new Translate({ 
     region: process.env.AWS_REGION,
@@ -25,6 +26,7 @@ const translateService = new Translate({
     }
 });
 const app = express();
+*/
 console.log('dflksdflksjdlfsjl');
 console.log(translateService);
 
@@ -46,6 +48,7 @@ let messageIds = [];
  * @param {Object} data the event data
  */
 
+/*
 app.post('/translate', (req, res) => {
     const body = req.body;
     const params = {
@@ -70,7 +73,7 @@ app.post('/translate', (req, res) => {
         res.status(400);
     });
 });
-
+*/
 
 const onMessage = data => {
     console.log(JSON.stringify(data));
