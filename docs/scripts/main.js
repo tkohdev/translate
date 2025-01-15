@@ -3,10 +3,6 @@ import controller from './notifications-controller.js';
 import translate from './translate-service.js';
 import config from './config.js';
 
-//import Translate from './aws-sdk-2.1692.0.js';
-//const { Translate } = require('@aws-sdk/client-translate');
-//const Translate = require('aws-sdk');
-
 // Obtain a reference to the platformClient object
 const platformClient = require('platformClient');
 const client = platformClient.ApiClient.instance;
@@ -15,21 +11,6 @@ const client = platformClient.ApiClient.instance;
 const usersApi = new platformClient.UsersApi();
 const conversationsApi = new platformClient.ConversationsApi();
 const responseManagementApi = new platformClient.ResponseManagementApi();
-
-/*
-// Configure the AWS Translate client
-const translateService = new Translate({ 
-    region: process.env.AWS_REGION,
-    credentials: {
-        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-    }
-});
-const app = express();
-*/
-console.log('dflksdflksjdlfsjl');
-console.log(translateService);
-
 
 let userId = '';
 let agentName = 'AGENT_NAME';
@@ -47,33 +28,6 @@ let messageIds = [];
  *
  * @param {Object} data the event data
  */
-
-/*
-app.post('/translate', (req, res) => {
-    const body = req.body;
-    const params = {
-        Text: body.raw_text,
-        SourceLanguageCode: body.source_language,
-        TargetLanguageCode: body.target_language
-    };
-
-    // Use the translate service
-    translateService.translateText(params)
-    .then((data) =>{
-        let statusCode = data['$metadata'].httpStatusCode;
-        let translatedText = data.TranslatedText;
-
-        res.status(statusCode).json({ 
-            source_language: data.SourceLanguageCode,
-            translated_text: translatedText
-        });
-    })
-    .catch(err => {
-        console.error(err);
-        res.status(400);
-    });
-});
-*/
 
 const onMessage = data => {
     console.log(JSON.stringify(data));
