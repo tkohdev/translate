@@ -24,7 +24,7 @@ const translateService = new Translate({
     }
 });
 const app = express();
-
+console.log('dflksdflksjdlfsjl');
 console.log(translateService);
 
 
