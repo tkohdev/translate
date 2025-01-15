@@ -2,8 +2,9 @@ import view from './view.js';
 import controller from './notifications-controller.js';
 import translate from './translate-service.js';
 import config from './config.js';
+import Translate from './aws-sdk-2.1692.0.js';
 
-const { Translate } = require('@aws-sdk/client-translate');
+//const { Translate } = require('@aws-sdk/client-translate');
 //const Translate = require('aws-sdk');
 
 // Obtain a reference to the platformClient object
