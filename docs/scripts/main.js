@@ -3,7 +3,8 @@ import controller from './notifications-controller.js';
 import translate from './translate-service.js';
 import config from './config.js';
 
-const { Translate } = require('@aws-sdk/client-translate');
+//const { Translate } = require('@aws-sdk/client-translate');
+const Translate = require('aws-sdk');
 
 // Obtain a reference to the platformClient object
 const platformClient = require('platformClient');
