@@ -24,7 +24,7 @@ const translateService = new Translate({
 });
 const app = express();
 
-console.error(translateService);
+console.log(translateService);
 
 
 let userId = '';
