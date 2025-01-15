@@ -1,4 +1,6 @@
 import config from './config.js';
+
+
 // import Translate from './aws-sdk-2.1692.0.js';
 // import { Translate } from "@aws-sdk/client-translate"; // ES Modules import
 
